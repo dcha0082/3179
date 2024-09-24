@@ -3,7 +3,7 @@
   "width": 800,
   "height": 450,
   "title": "Red Kangaroo Sightings and Geographic Features",
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "mercator"},
   "layer": [
       {
           "data": {
