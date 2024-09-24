@@ -124,15 +124,7 @@
               "filter": "datum.NumberIndividuals > 0"
             },
             {
-              "calculate": "toDate(datum.DateFirst, '%d/%m/%Y %H:%M')",
-              "as": "ParsedDateFirst"
-            },
-            {
-              "calculate": "toDate(datum.DateLast, '%d/%m/%Y %H:%M')",
-              "as": "ParsedDateLast"
-            },
-            {
-              "filter": "datum.ParsedDateFirst != null && datum.ParsedDateLast != null"
+                "filter": "datum.DateFirst != null && datum.DateLast != null"
             },
             {
               "calculate": "datum.LocationNotes != null && length(datum.LocationNotes) > 0 ? datum.LocationNotes : 'No Notes'",
@@ -204,8 +196,8 @@
                   "value": "blue"
               },
               "tooltip": [
-                {"field": "ParsedDateFirst", "type": "temporal", "title": "First Sighting Date"},
-                {"field": "ParsedDateLast", "type": "temporal", "title": "Last Sighting Date"},
+                {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
+                {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
                 {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
                 {"field": "ObservationDescription", "type": "nominal", "title": "Observation Type"},
                 {"field": "Description", "type": "nominal", "title": "Location Description"},
