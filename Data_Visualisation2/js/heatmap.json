@@ -1,43 +1,60 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Red-Kangaroo-Population.csv",
-      "format": {
-        "type": "csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": {
+    "text": "Kangaroo Population by Zone Over the Years",
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "species",
+      "value": "Red Kangaroo",
+      "bind": {
+        "input": "select",
+        "options": ["Red Kangaroo", "Western Grey Kangaroo", "Eastern Grey Kangaroo"],
+        "name": "Select Kangaroo Species: "
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Kangaroo-Population.csv", 
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum['Kangaroo Type'] == species"
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "axis": {"title": "Year"}
+    },
+    "y": {
+      "field": "Zone",
+      "type": "nominal",
+      "axis": {"title": "Zone"}
+    },
+    "color": {
+      "field": "Population (p)",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      },
+      "legend": {
+        "title": "Population Size"
       }
     },
-    "width": 800,
-    "height": 400,
-    "mark": "rect",
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "ordinal",
-        "axis": {"title": "Year"}
-      },
-      "y": {
-        "field": "Zone",
-        "type": "nominal",
-        "axis": {"title": "Zone"}
-      },
-      "color": {
-        "field": "Population (p)",
-        "type": "quantitative",
-        "scale": {
-          "scheme": "blues"
-        },
-        "legend": {
-          "title": "Population Size"
-        }
-      },
-      "tooltip": [
-        {"field": "Year", "type": "ordinal", "title": "Year"},
-        {"field": "Zone", "type": "nominal", "title": "Zone"},
-        {"field": "Population (p)", "type": "quantitative", "title": "Population", "format": ","}
-      ]
-    },
-    "title": {
-      "text": "Red Kangaroo Population by Zone Over the Years",
-      "anchor": "middle"
-    }
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Zone", "type": "nominal", "title": "Zone"},
+      {"field": "Population (p)", "type": "quantitative", "title": "Population", "format": ","},
+      {"field": "Kangaroo Type", "type": "nominal", "title": "Kangaroo Type"}
+    ]
   }
+}
