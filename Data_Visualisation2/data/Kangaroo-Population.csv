@@ -101,12 +101,55 @@
 2019,SE NSW,1721400,258210,30977,1.8,12,68.68,20.56,33.84,Eastern Grey Kangaroo
 2019,C/T North,1728200,259230,42879,2.48,16.54,77.26,19.11,29.78,Eastern Grey Kangaroo
 2019,C/T South,933900,140085,23401,2.51,16.7,84,20.02,29.48,Eastern Grey Kangaroo
-2018,Narrabri,442522,66378,50692,76.4,11.5,77.8,17.6,26.1,Eastern Grey Kangaroo
-2018,Armidale,420800,63120,19482,30.9,4.6,78.4,18.2,31.9,Eastern Grey Kangaroo
-2018,Coonabarabran,847077,127061,86090,67.8,10.2,94.8,18.1,26.6,Eastern Grey Kangaroo
-2018,Griffith,1046879,157032,43508,27.7,4.2,85.3,19.9,30.3,Eastern Grey Kangaroo
-2018,Glen Innes,587400,88110,19870,22.6,3.4,87.2,18.5,30.6,Eastern Grey Kangaroo
-2018,Upper Hunter,259600,38940,18249,46.9,7,86.4,19,30.8,Eastern Grey Kangaroo
-2018,SE NSW,1284300,192645,10918,5.7,0.9,89.3,20.8,35.2,Eastern Grey Kangaroo
-2018,C/T North,1728200,259230,23400,9,1.4,82.9,19,31.3,Eastern Grey Kangaroo
-2018,C/T South,933900,140085,23691,16.9,2.5,90.7,19.7,30.7,Eastern Grey Kangaroo
+2018,Narrabri,442522,66378,50692,11.5,76.4,77.8,17.6,26.1,Eastern Grey Kangaroo
+2018,Armidale,420800,63120,19482,4.6,30.9,78.4,18.2,31.9,Eastern Grey Kangaroo
+2018,Coonabarabran,847077,127061,86090,10.2,67.8,94.8,18.1,26.6,Eastern Grey Kangaroo
+2018,Griffith,1046879,157032,43508,4.2,27.7,85.3,19.9,30.3,Eastern Grey Kangaroo
+2018,Glen Innes,587400,88110,19870,3.4,22.6,87.2,18.5,30.6,Eastern Grey Kangaroo
+2018,Upper Hunter,259600,38940,18249,7,46.9,86.4,19,30.8,Eastern Grey Kangaroo
+2018,SE NSW,1284300,192645,10918,0.9,5.7,89.3,20.8,35.2,Eastern Grey Kangaroo
+2018,C/T North,1728200,259230,23400,1.4,9,82.9,19,31.3,Eastern Grey Kangaroo
+2018,C/T South,933900,140085,23691,2.5,16.9,90.7,19.7,30.7,Eastern Grey Kangaroo
+2022,Tibooburra,6120,918,129,2.1,14.1,77.5,17.9,28.2,Western Grey Kangaroo
+2022,Broken Hill,106869,16030,7109,6.7,44.3,70.6,18.6,27.7,Western Grey Kangaroo
+2022,Lower Darling,194524,29179,7705,4,26.4,76.1,18.8,27.7,Western Grey Kangaroo
+2022,Cobar,39569,5935,1066,2.7,18,65.5,18.1,27.1,Western Grey Kangaroo
+2022, Bourke,13856,1386,101,0.7,7.3,83.2,17.9,23.3,Western Grey Kangaroo
+2022,Narrabri,3118,0,0,-,-,-,-,-,Western Grey Kangaroo
+2022,Coonabarabran,72466,10870,330,0.5,3,79.1,16.5,25.7,Western Grey Kangaroo
+2022,Griffith North,116002,17400,3984,3.4,22.9,71.9,18.9,27.9,Western Grey Kangaroo
+2022,Griffith South,86904,13036,632,0.7,4.8,89.1,18.5,27.7,Western Grey Kangaroo
+2021,Tibooburra,1372,0,0,0,0,0,0,0,Western Grey Kangaroo
+2021,Broken Hill,163218,24483,8308,5.1,33.9,63.5,18.7,27.8,Western Grey Kangaroo
+2021,Lower Darling,217101,32565,10214,4.7,31.4,69.1,18,27.4,Western Grey Kangaroo
+2021,Cobar,25641,2564,747,2.9,29.1,72,17.2,26.4,Western Grey Kangaroo
+2021,Bourke,15771,1577,217,1.4,13.8,75.6,17.9,28.6,Western Grey Kangaroo
+2021,Narrabri,7457,0,0,0,0,0,0,0,Western Grey Kangaroo
+2021,Coonabarabran,62376,9356,745,1.2,8,67.2,16.8,26.2,Western Grey Kangaroo
+2021,Griffith North,71597,10739,4791,6.7,44.6,74.1,19.8,30,Western Grey Kangaroo
+2021,Griffith South,63205,9481,730,1.2,7.7,78.2,19.2,28.6,Western Grey Kangaroo
+2020,Tibooburra,9859,986,0,0,0,0,0,0,Western Grey Kangaroo
+2020,Broken Hill,190411,28562,6780,3.6,23.7,63.7,18.3,26.1,Western Grey Kangaroo
+2020,Lower Darling,260183,39027,6899,2.7,17.7,71.5,17.6,25.5,Western Grey Kangaroo
+2020,Cobar,4270,0,0,0,0,0,0,0,Western Grey Kangaroo
+2020, Bourke,10516,0,0,0,0,0,0,0,Western Grey Kangaroo
+2020,Narrabri,5575,0,0,0,0,0,0,0,Western Grey Kangaroo
+2020,Coonabarabran,114372,17156,161,0.1,0.9,65.8,15.2,21.4,Western Grey Kangaroo
+2020,Griffith North,175868,26380,4870,2.8,18.5,74,18.5,27,Western Grey Kangaroo
+2020,Griffith South,112791,16919,197,0.2,1.2,70.6,21.2,23.9,Western Grey Kangaroo
+2019,Tibooburra,37402,5610,0,0,0,0,0,0,Western Grey Kangaroo
+2019,Broken Hill,230467,34570,6469,2.81,18.71,73.69,17.71,24.37,Western Grey Kangaroo
+2019,Lower Darling,193074,28961,6545,3.39,22.6,73.17,16.7,23.93,Western Grey Kangaroo
+2019,Cobar,47500,0,0,0,0,0,0,0,Western Grey Kangaroo
+2019,Bourke,70208,10531,199,0.28,1.89,96.48,16.8,22.59,Western Grey Kangaroo
+2019,Narrabri,5895,0,0,0,0,0,0,0,Western Grey Kangaroo
+2019,Coonabarabran,94863,9486,1038,1.09,10.94,94.7,16.51,22.13,Western Grey Kangaroo
+2019,Griffith,157085,23563,4518,2.88,19.17,81.06,18.61,26,Western Grey Kangaroo
+2018,Tibooburra,35787,5368,463,1.3,8.6,97.2,18.9,33.1,Western Grey Kangaroo
+2018,Broken Hill,255400,38310,14505,5.7,37.9,95.5,19.4,29.1,Western Grey Kangaroo
+2018,Lower Darling,145972,21896,11626,8,53.1,89.4,17.7,27.8,Western Grey Kangaroo
+2018,Cobar,107424,10742,2949,2.7,27.5,99.8,16.3,26.7,Western Grey Kangaroo
+2018,Bourke,84502,12675,1329,1.6,10.5,99.6,25.2,28.8,Western Grey Kangaroo
+2018,Narrabri,3607,-,-,-,-,-,-,-,Western Grey Kangaroo
+2018,Coonabarabran,68134,6813,2405,3.5,35.3,97.9,18.8,24.1,Western Grey Kangaroo
+2018,Griffith,215756,32363,8116,3.8,25.1,90.9,19.2,27.6,Western Grey Kangaroo
