@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W10_homework/data/Red-Kangaroo-Population.csv",
+      "format": {
+        "type": "csv"
+      }
+    },
+    "width": 800,
+    "height": 400,
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "axis": {"title": "Year"}
+      },
+      "y": {
+        "field": "Zone",
+        "type": "nominal",
+        "axis": {"title": "Zone"}
+      },
+      "color": {
+        "field": "Population (p)",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "blues"
+        },
+        "legend": {
+          "title": "Population Size"
+        }
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Zone", "type": "nominal", "title": "Zone"},
+        {"field": "Population (p)", "type": "quantitative", "title": "Population"}
+      ]
+    },
+    "title": {
+      "text": "Red Kangaroo Population by Zone Over the Years",
+      "anchor": "middle"
+    }
+  }
