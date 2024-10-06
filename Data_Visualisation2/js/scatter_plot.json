@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W10_homework/data/Red-Kangaroo-Population.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "params": [
+    {
+      "name": "populationRange",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1300000,
+        "step": 50000,
+        "name": "Kangaroo Population Above: "
+      }
+    },
+    {
+        "name": "harvestRange",
+        "value": 0,
+        "bind": {
+            "input": "range",
+            "min": 0,
+            "max": 100000,
+            "step": 5000,
+            "name": "Harvest Amount Above: "
+        }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum['Population (p)'] >= populationRange && datum['Harvest'] >= harvestRange"
+    }
+  ],
+  "width": 800,
+  "height": 400,
+  "encoding": {
+      "x": {
+          "field": "Population (p)",
+          "type": "quantitative",
+          "axis": {"title": "Population"}
+      },
+      "y": {
+          "field": "Harvest",
+          "type": "quantitative",
+          "axis": {"title": "Harvest Amount"}
+      }
+  },
+  "layer": [
+      {
+          "mark": "point",
+          "encoding": {
+              "color": {
+                  "field": "Year",
+                  "type": "nominal",
+                  "legend": {"title": "Year"}
+              },
+              "tooltip": [
+                  {"field": "Year", "type": "ordinal", "title": "Year"},
+                  {"field": "Zone", "type": "nominal", "title": "Zone"},
+                  {"field": "Population (p)", "type": "quantitative", "title": "Population", "format": ","},
+                  {"field": "Harvest", "type": "quantitative", "title": "Harvest", "format": ","}
+              ]
+          }
+      },
+      {
+          "mark": {
+              "type": "text",
+              "align": "left",
+              "baseline": "middle",
+              "dx": -25,   
+              "dy": -8, 
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+          },
+          "transform": [
+              {
+                  "filter": "datum['Population (p)'] == 1281119 || datum['Population (p)'] == 36058 || datum['Population (p)'] == 1135531 || datum['Population (p)'] == 819450 || datum['Population (p)'] == 218312"
+              }
+          ],
+          "encoding": {
+              "text": {
+                  "field": "Zone"
+              },
+              "color": {
+                  "value": "black"
+              },
+              "opacity": {
+                  "value": 1
+              }
+          }
+      }
+  ],
+  "title": {
+    "text": "Kangaroo Population vs. Harvest Amount by Zone",
+    "anchor": "middle"
+  }
+}
