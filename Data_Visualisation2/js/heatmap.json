@@ -33,7 +33,7 @@
       "tooltip": [
         {"field": "Year", "type": "ordinal", "title": "Year"},
         {"field": "Zone", "type": "nominal", "title": "Zone"},
-        {"field": "Population (p)", "type": "quantitative", "title": "Population"}
+        {"field": "Population (p)", "type": "quantitative", "title": "Population", "format": ","}
       ]
     },
     "title": {
