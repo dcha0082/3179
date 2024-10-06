@@ -71,8 +71,8 @@
               "type": "text",
               "align": "left",
               "baseline": "middle",
-              "dx": 5,   
-              "dy": -5, 
+              "dx": -25,   
+              "dy": -8, 
               "fontSize": 11.5,
               "fontStyle": "italic"
           },

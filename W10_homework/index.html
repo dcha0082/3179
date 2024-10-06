@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Red Kangaroo Sightings and Geographic Features</title>
+
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Link to external -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+  
+    <div id="scatter_plot"></div>
+    <div id="kangaroo_map"></div>
+
+<script type="text/javascript">
+  // Specify the path to the Vega-Lite JSON file for the kangaroo map
+  var kangarooMapSpec = "js/updated_kangaroo_map.json";
+
+  // Embed the visualization in the div with id "kangaroo_map"
+  vegaEmbed('#kangaroo_map', kangarooMapSpec).then(function(result) {
+  }).catch(console.error);
+
+  // Specify the path to the Vega-Lite JSON file for the scatter plot
+  var scatterPlotSpec = "js/scatter_plot.json";
+
+  // Embed the visualization in the div with id "scatter_plot"
+  vegaEmbed('#scatter_plot', scatterPlotSpec).then(function(result) {
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
