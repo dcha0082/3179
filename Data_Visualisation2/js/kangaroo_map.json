@@ -1,226 +1,179 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
-    "title": "Red Kangaroo Sightings and Geographic Features",
-    "params": [
-      {
-        "name": "Year_selection",
-        "value": 2016,
-        "bind": {
-          "input": "range",
-          "min": 1992,
-          "max": 2023,
-          "step": 1,
-          "name": "Year: "
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Red and Western Grey Kangaroo Sightings and Geographic Features",
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2016,
+      "bind": {
+        "input": "range",
+        "min": 1992,
+        "max": 2023,
+        "step": 1,
+        "name": "Year: "
       }
-    ],
-    "projection": {"type": "mercator"},
-    "layer": [
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightgray",
-          "stroke": "black",
-          "strokeWidth": 0.5,
-          "opacity": 0.5
-        }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_roads"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "transparent",
-          "stroke": "red",
-          "strokeWidth": 1
-        }
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "black",
+        "strokeWidth": 0.5,
+        "opacity": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
+        "format": {"type": "topojson", "feature": "ne_10m_roads"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_urban_areas"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightblue",
-          "stroke": "black",
-          "strokeWidth": 0.5,
-          "opacity": 0.7
-        }
+      "mark": {
+        "type": "geoshape",
+        "fill": "transparent",
+        "stroke": "red",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
+        "format": {"type": "topojson", "feature": "ne_10m_urban_areas"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_railroads"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "transparent",
-          "stroke": "purple",
-          "strokeWidth": 1
-        }
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightblue",
+        "stroke": "black",
+        "strokeWidth": 0.5,
+        "opacity": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
+        "format": {"type": "topojson", "feature": "ne_10m_land"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_land"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightgreen",
-          "stroke": "white",
-          "opacity": 0.5
-        }
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgreen",
+        "stroke": "white",
+        "opacity": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Red-Kangaroo-Sightings.csv"
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_rivers_australia"}
+      "transform": [
+        {
+          "filter": "datum.NumberIndividuals > 0"
         },
-        "mark": {
-          "type": "geoshape",
-          "fill": "transparent",
-          "stroke": "blue",
-          "strokeWidth": 1
+        {
+          "filter": "datum.DateFirst != null && datum.DateLast != null"
+        },
+        {
+          "filter": "year(datum.DateFirst) == Year_selection" 
         }
+      ],
+      "mark": {
+        "type": "circle",
+        "tooltip": true
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_lakes_australia"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightcyan",
-          "stroke": "blue",
-          "opacity": 0.5
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_graticules_30"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "transparent",
-          "stroke": "black",
-          "strokeWidth": 0.5
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
-          "format": {"type": "topojson", "feature": "ne_10m_ocean"}
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightblue",
-          "stroke": "white",
-          "opacity": 0.5
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/kangaroo-sightings.csv"
-        },
-        "transform": [
-          {
-            "filter": "datum.NumberIndividuals > 0"
+      "encoding": {
+        "longitude": {"field": "Longitude_GDA94", "type": "quantitative"},
+        "latitude": {"field": "Latitude_GDA94", "type": "quantitative"},
+        "size": {
+          "field": "NumberIndividuals",
+          "type": "quantitative",
+          "scale": {
+            "domain": [1, 150],
+            "range": [40, 250]
           },
-          {
-            "filter": "datum.DateFirst != null && datum.DateLast != null"
-          },
-          {
-            "calculate": "datum.LocationNotes != null && length(datum.LocationNotes) > 0 ? datum.LocationNotes : 'No Notes'",
-            "as": "LocationNotesDisplay"
-          },
-          {
-            "lookup": "ObservationType",
-            "from": {
-              "data": {
-                "values": [
-                  {"code": "A", "description": "Stranding/Beaching"},
-                  {"code": "AR", "description": "Acoustic recording"},
-                  {"code": "B", "description": "Burnt"},
-                  {"code": "C", "description": "Cat kill"},
-                  {"code": "D", "description": "Dog Kill"},
-                  {"code": "E", "description": "Nest/Roost"},
-                  {"code": "F", "description": "Tracks or scratchings"},
-                  {"code": "FB", "description": "Burrow"},
-                  {"code": "G", "description": "Crushed Cones"},
-                  {"code": "H", "description": "Hair, feathers or skin"},
-                  {"code": "I", "description": "Subfossil/Fossil remains"},
-                  {"code": "J", "description": "Floristics Record"},
-                  {"code": "K", "description": "Dead"},
-                  {"code": "L", "description": "Flora record"},
-                  {"code": "M", "description": "Miscellaneous"},
-                  {"code": "N", "description": "Not located"},
-                  {"code": "O", "description": "Seen"},
-                  {"code": "OW", "description": "Seen and heard"},
-                  {"code": "P", "description": "Scat"},
-                  {"code": "Q", "description": "Camera"},
-                  {"code": "R", "description": "Road kill"},
-                  {"code": "S", "description": "Shot"},
-                  {"code": "T", "description": "Trapped or netted"},
-                  {"code": "U", "description": "Ultrasonic recording"},
-                  {"code": "V", "description": "Fox kill"},
-                  {"code": "W", "description": "Heard call"},
-                  {"code": "X", "description": "In scat"},
-                  {"code": "Y", "description": "Bone, teeth, shell"},
-                  {"code": "Z", "description": "In raptor/owl pellet"}
-                ]
-              },
-              "key": "code",
-              "fields": ["description"]
-            },
-            "as": "ObservationDescription"
-          },
-          {
-            "filter": "year(datum.DateFirst) == Year_selection" 
+          "legend": {
+            "title": "Number of Individuals",
+            "orient": "right"
           }
-        ],
-        "mark": {
-          "type": "circle",
-          "tooltip": true
         },
-        "encoding": {
-          "longitude": {"field": "Longitude_GDA94", "type": "quantitative"},
-          "latitude": {"field": "Latitude_GDA94", "type": "quantitative"},
-          "size": {
-            "field": "NumberIndividuals",
-            "type": "quantitative",
-            "scale": {
-              "domain": [1, 150],
-              "range": [40, 250]
-            },
-            "legend": {
-              "title": "Number of Individuals",
-              "values": [1, 10, 30, 50, 70, 90, 110, 130, 150],
-              "format": "d"
-            }
-          },
-          "color": {
-            "value": "coral"
-          },
-          "tooltip": [
-            {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
-            {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
-            {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
-            {"field": "ObservationDescription", "type": "nominal", "title": "Observation Type"},
-            {"field": "Description", "type": "nominal", "title": "Location Description"},
-            {"field": "LocationNotesDisplay", "type": "nominal", "title": "Location Notes"}
-          ]
-        }
+        "color": {
+          "value": "coral"
+        },
+        "tooltip": [
+          {"field": "CommonName", "type": "nominal", "title": "Species Name"},
+          {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
+          {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
+          {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
+          {"field": "Description", "type": "nominal", "title": "Location Description"}
+        ]
       }
-    ]
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Western-Grey-Kangaroo-Sightings.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.NumberIndividuals > 0"
+        },
+        {
+          "filter": "datum.DateFirst != null && datum.DateLast != null"
+        },
+        {
+          "filter": "year(datum.DateFirst) == Year_selection" 
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "tooltip": true
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude_GDA94", "type": "quantitative"},
+        "latitude": {"field": "Latitude_GDA94", "type": "quantitative"},
+        "size": {
+          "field": "NumberIndividuals",
+          "type": "quantitative",
+          "scale": {
+            "domain": [1, 150],
+            "range": [40, 250]
+          },
+          "legend": {
+            "title": "Number of Individuals",
+            "orient": "right"
+          }
+        },
+        "color": {
+          "value": "lightblue"
+        },
+        "tooltip": [
+          {"field": "CommonName", "type": "nominal", "title": "Species Name"},
+          {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
+          {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
+          {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
+          {"field": "Description", "type": "nominal", "title": "Location Description"}
+        ]
+      }
+    }
+  ],
+  "encoding": {
+    "color": {
+      "field": "Species",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Red Kangaroo", "Western Grey Kangaroo"],
+        "range": ["coral", "lightblue"]
+      },
+      "legend": {
+        "title": "Species",
+        "orient": "right",
+        "direction": "vertical"
+      }
+    }
   }
-  
+}

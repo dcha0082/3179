@@ -38,7 +38,7 @@ body {
   #kangaroo_map, #scatter_plot, #heatmap {
 	border: 1px solid #ccc;
 	height: 550px; /* Set a fixed height for each graph */
-	width: 60%; /* Adjust width to fit the graph */
+	width: 100%; /* Adjust width to fit the graph */
 	margin-left: 20px;
 	border-radius: 4px;
 	background-color: #f7f7f7;
