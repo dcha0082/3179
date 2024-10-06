@@ -20,7 +20,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
         },
         "mark": {
@@ -33,7 +33,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_roads"}
         },
         "mark": {
@@ -45,7 +45,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_urban_areas"}
         },
         "mark": {
@@ -58,7 +58,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_railroads"}
         },
         "mark": {
@@ -70,7 +70,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_land"}
         },
         "mark": {
@@ -82,7 +82,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_rivers_australia"}
         },
         "mark": {
@@ -94,7 +94,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_lakes_australia"}
         },
         "mark": {
@@ -106,7 +106,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_graticules_30"}
         },
         "mark": {
@@ -118,7 +118,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/js/ne_10m.json",
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/js/ne_10m.json",
           "format": {"type": "topojson", "feature": "ne_10m_ocean"}
         },
         "mark": {
@@ -130,7 +130,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/W9_homework/data/Atlas_records_resykixxei2elshbzz5c5zwh20240924-170035.csv"
+          "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/kangaroo-sightings.csv"
         },
         "transform": [
           {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Red Kangaroo In New South Wales Australia</title>
+
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+
+    <div class="header">
+      <h1>Red Kangaroo In New South Wales Australia</h1>
+    </div>
+
+    <div class="container">
+      <div id="kangaroo_map"></div>
+      <div class="text-container">
+        <h2>Kangaroo Map</h2>
+        <p>Explore the sightings of red kangaroos across different geographic features.</p>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-container">
+        <h2>Scatter Plot of Sightings</h2>
+        <p>This scatter plot displays the correlation between different variables related to kangaroo sightings.</p>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div id="scatter_plot"></div>
+    </div>
+    
+    <div class="container">
+      <div id="heatmap"></div>
+      <div class="text-container">
+        <h2>Heatmap of Sightings Density</h2>
+        <p>The heatmap visualizes the density of kangaroo sightings in various regions.</p>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+
+<script type="text/javascript">
+  // Specify the path to the Vega-Lite JSON files for the visualizations
+  var kangarooMapSpec = "js/kangaroo_map.json";
+  var scatterPlotSpec = "js/scatter_plot.json";
+  var heatmapSpec = "js/heatmap.json"; // Path for heatmap JSON file
+
+  // Embed the visualization in the corresponding divs
+  vegaEmbed('#kangaroo_map', kangarooMapSpec).then(function(result) {
+  }).catch(console.error);
+
+  vegaEmbed('#scatter_plot', scatterPlotSpec).then(function(result) {
+  }).catch(console.error);
+
+  vegaEmbed('#heatmap', heatmapSpec).then(function(result) {
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
