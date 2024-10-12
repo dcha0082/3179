@@ -25,8 +25,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "black",
+        "fill": "#F5F5F5",
+        "stroke": "#A6A6A6",
         "strokeWidth": 0.5,
         "opacity": 0.5
       }
@@ -39,7 +39,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "transparent",
-        "stroke": "red",
+        "stroke": "#D8B84B",
         "strokeWidth": 1
       }
     },
@@ -50,109 +50,15 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightblue",
-        "stroke": "black",
+        "fill": "#AEEEEE",
+        "stroke": "#007BFF",
         "strokeWidth": 0.5,
         "opacity": 0.7
       }
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Red-Kangaroo-Sightings.csv"
-      },
-      "transform": [
-        {
-          "filter": "datum.NumberIndividuals > 0"
-        },
-        {
-          "filter": "datum.DateFirst != null && datum.DateLast != null"
-        },
-        {
-          "filter": "year(datum.DateFirst) == Year_selection" 
-        }
-      ],
-      "mark": {
-        "type": "circle",
-        "tooltip": true
-      },
-      "encoding": {
-        "longitude": {"field": "Longitude_GDA94", "type": "quantitative"},
-        "latitude": {"field": "Latitude_GDA94", "type": "quantitative"},
-        "size": {
-          "field": "NumberIndividuals",
-          "type": "quantitative",
-          "scale": {
-            "domain": [1, 300],
-            "range": [40, 350]
-          },
-          "legend": {
-            "title": "Number of Individuals",
-            "orient": "right",
-            "values": [1, 50, 100, 150, 200, 250, 300]
-          }
-        },
-        "color": {
-          "value": "coral"
-        },
-        "tooltip": [
-          {"field": "CommonName", "type": "nominal", "title": "Species Name"},
-          {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
-          {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
-          {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
-          {"field": "Description", "type": "nominal", "title": "Location Description"}
-        ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Western-Grey-Kangaroo-Sightings.csv"
-      },
-      "transform": [
-        {
-          "filter": "datum.NumberIndividuals > 0"
-        },
-        {
-          "filter": "datum.DateFirst != null && datum.DateLast != null"
-        },
-        {
-          "filter": "year(datum.DateFirst) == Year_selection" 
-        }
-      ],
-      "mark": {
-        "type": "circle",
-        "tooltip": true
-      },
-      "encoding": {
-        "longitude": {"field": "Longitude_GDA94", "type": "quantitative"},
-        "latitude": {"field": "Latitude_GDA94", "type": "quantitative"},
-        "size": {
-          "field": "NumberIndividuals",
-          "type": "quantitative",
-          "scale": {
-            "domain": [1, 300],
-            "range": [40, 350]
-          },
-          "legend": {
-            "title": "Number of Individuals",
-            "orient": "right",
-            "values": [1, 50, 100, 150, 200, 250, 300]
-          }
-        },
-        "color": {
-          "value": "lightblue"
-        },
-        "tooltip": [
-          {"field": "CommonName", "type": "nominal", "title": "Species Name"},
-          {"field": "DateFirst", "type": "temporal", "title": "First Sighting Date"},
-          {"field": "DateLast", "type": "temporal", "title": "Last Sighting Date"},
-          {"field": "NumberIndividuals", "type": "quantitative", "title": "Number of Individuals"},
-          {"field": "Description", "type": "nominal", "title": "Location Description"}
-        ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Eastern-Grey-Kangaroo-Sightings.csv"
+        "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Kangaroo-Sightings.csv"
       },
       "transform": [
         {
@@ -186,7 +92,17 @@
           }
         },
         "color": {
-          "value": "green"
+          "field": "CommonName",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Red Kangaroo", "Western Grey Kangaroo", "Eastern Grey Kangaroo"],
+            "range": ["#C72C3B", "#A5A66D", "#4C8CBB"]
+          },
+          "legend": {
+            "title": "Species",
+            "orient": "right",
+            "direction": "vertical"
+          }
         },
         "tooltip": [
           {"field": "CommonName", "type": "nominal", "title": "Species Name"},
@@ -196,21 +112,6 @@
           {"field": "Description", "type": "nominal", "title": "Location Description"}
         ]
       }
-    }    
-  ],
-  "encoding": {
-    "color": {
-      "field": "Species",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Red Kangaroo", "Western Grey Kangaroo", "Eastern Grey Kangaroo"],
-        "range": ["coral", "lightblue", "green"]
-      },
-      "legend": {
-        "title": "Species",
-        "orient": "right",
-        "direction": "vertical"
-      }
     }
-  }
+  ]
 }
