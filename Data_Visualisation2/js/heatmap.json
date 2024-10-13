@@ -18,7 +18,7 @@
     }
   ],
   "data": {
-    "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Kangaroo-Population.csv", 
+    "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Kangaroo-Population.csv",
     "format": {
       "type": "csv"
     }
@@ -26,6 +26,14 @@
   "transform": [
     {
       "filter": "datum['Kangaroo Type'] == species"
+    },
+    {
+      "calculate": "datum['Population (p)'] === '-' ? 0 : parseFloat(datum['Population (p)'])",
+      "as": "PopulationValue"
+    },
+    {
+      "calculate": "datum['PopulationValue'] === 0 ? 'No Data' : datum['PopulationValue']",
+      "as": "PopulationDisplay"
     }
   ],
   "mark": "rect",
@@ -33,7 +41,7 @@
     "x": {
       "field": "Year",
       "type": "ordinal",
-      "axis": {"title": "Year"}
+      "axis": {"title": "Year", "labelAngle": 0}
     },
     "y": {
       "field": "Zone",
@@ -41,10 +49,15 @@
       "axis": {"title": "Zone"}
     },
     "color": {
-      "field": "Population (p)",
+      "field": "PopulationValue",
       "type": "quantitative",
       "scale": {
-        "scheme": "blues"
+        "domain": {
+          "signal": "species === 'Red Kangaroo' ? [0, 1300000] : species === 'Western Grey Kangaroo' ? [0, 260000] : [0, 1800000]"
+        },
+        "range": [
+          "#FFFFFF", {"signal": "species === 'Red Kangaroo' ? '#C72C3B' : species === 'Western Grey Kangaroo' ? '#A5A66D' : '#4C8CBB'"}
+        ]
       },
       "legend": {
         "title": "Population Size"
@@ -53,7 +66,11 @@
     "tooltip": [
       {"field": "Year", "type": "ordinal", "title": "Year"},
       {"field": "Zone", "type": "nominal", "title": "Zone"},
-      {"field": "Population (p)", "type": "quantitative", "title": "Population", "format": ","},
+      {
+        "field": "PopulationDisplay", 
+        "type": "ordinal", 
+        "title": "Population"
+      },
       {"field": "Kangaroo Type", "type": "nominal", "title": "Kangaroo Type"}
     ]
   }

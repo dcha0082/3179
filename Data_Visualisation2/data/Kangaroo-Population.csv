@@ -114,7 +114,7 @@
 2022,Broken Hill,106869,16030,7109,6.7,44.3,70.6,18.6,27.7,Western Grey Kangaroo
 2022,Lower Darling,194524,29179,7705,4,26.4,76.1,18.8,27.7,Western Grey Kangaroo
 2022,Cobar,39569,5935,1066,2.7,18,65.5,18.1,27.1,Western Grey Kangaroo
-2022, Bourke,13856,1386,101,0.7,7.3,83.2,17.9,23.3,Western Grey Kangaroo
+2022,Bourke,13856,1386,101,0.7,7.3,83.2,17.9,23.3,Western Grey Kangaroo
 2022,Narrabri,3118,0,0,-,-,-,-,-,Western Grey Kangaroo
 2022,Coonabarabran,72466,10870,330,0.5,3,79.1,16.5,25.7,Western Grey Kangaroo
 2022,Griffith North,116002,17400,3984,3.4,22.9,71.9,18.9,27.9,Western Grey Kangaroo
@@ -132,7 +132,7 @@
 2020,Broken Hill,190411,28562,6780,3.6,23.7,63.7,18.3,26.1,Western Grey Kangaroo
 2020,Lower Darling,260183,39027,6899,2.7,17.7,71.5,17.6,25.5,Western Grey Kangaroo
 2020,Cobar,4270,0,0,0,0,0,0,0,Western Grey Kangaroo
-2020, Bourke,10516,0,0,0,0,0,0,0,Western Grey Kangaroo
+2020,Bourke,10516,0,0,0,0,0,0,0,Western Grey Kangaroo
 2020,Narrabri,5575,0,0,0,0,0,0,0,Western Grey Kangaroo
 2020,Coonabarabran,114372,17156,161,0.1,0.9,65.8,15.2,21.4,Western Grey Kangaroo
 2020,Griffith North,175868,26380,4870,2.8,18.5,74,18.5,27,Western Grey Kangaroo
@@ -153,3 +153,29 @@
 2018,Narrabri,3607,-,-,-,-,-,-,-,Western Grey Kangaroo
 2018,Coonabarabran,68134,6813,2405,3.5,35.3,97.9,18.8,24.1,Western Grey Kangaroo
 2018,Griffith,215756,32363,8116,3.8,25.1,90.9,19.2,27.6,Western Grey Kangaroo
+2018,Griffith North,-,-,-,-,-,-,-,-,Red Kangaroo
+2018,Griffith South,-,-,-,-,-,-,-,-,Red Kangaroo
+2019,Griffith North,-,-,-,-,-,-,-,-,Red Kangaroo
+2019,Griffith South,-,-,-,-,-,-,-,-,Red Kangaroo
+2020,Griffith,-,-,-,-,-,-,-,-,Red Kangaroo
+2021,Griffith,-,-,-,-,-,-,-,-,Red Kangaroo
+2022,Griffith,-,-,-,-,-,-,-,-,Red Kangaroo
+2018,Griffith North,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2018,Griffith South,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2019,Griffith North,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2019,Griffith South,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2020,Griffith,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2021,Griffith,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2022,Griffith,-,-,-,-,-,-,-,-,Western Grey Kangaroo
+2018,Bourke,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Broken Hill,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Cobar,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Lower Darling,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Tibooburra,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Griffith North,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2018,Griffith South,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2019,Griffith North,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2019,Griffith South,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2020,Griffith,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2021,Griffith,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
+2022,Griffith,-,-,-,-,-,-,-,-,Eastern Grey Kangaroo
