@@ -1,0 +1,98 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Gender Composition of Harvest by Zone",
+    "width": 800,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/dcha0082/3179/refs/heads/main/Data_Visualisation2/data/Kangaroo-Population.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "calculate": "100 - datum['% harvest male']",
+        "as": "FemaleHarvestPercentage"
+      },
+      {
+        "filter": "datum['% harvest male'] != '-' && datum['FemaleHarvestPercentage'] != '-' && datum['% harvest male'] != null && datum['FemaleHarvestPercentage'] != null"
+      },
+      {
+        "filter": "datum.Zone == zoneSelection"
+      },
+      {
+        "filter": "datum['Kangaroo Type'] == kangarooTypeSelection"
+      },
+      {
+        "fold": ["% harvest male", "FemaleHarvestPercentage"],
+        "as": ["Harvest Gender", "Percentage"]
+      },
+      {
+        "calculate": "datum['Harvest Gender'] == '% harvest male' ? 'Male' : 'Female'",
+        "as": "Gender"
+      }
+    ],
+    "mark": "area",
+    "encoding": {
+      "x": {"field": "Year", "type": "ordinal", "axis": {"title": "Year", "labelAngle": 0}},
+      "y": {
+        "field": "Percentage",
+        "type": "quantitative",
+        "stack": "zero",
+        "title": "Harvest Percentage by Gender"
+      },
+      "color": {
+        "field": "Gender",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Male", "Female"],
+          "range": ["#bae1ff", "#ffb3ba"]
+        },
+        "legend": {"title": "Gender"}
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Gender", "type": "nominal", "title": "Gender"},
+        {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Harvest %",
+          "format": ".2f"
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "zoneSelection",
+        "value": "Tibooburra",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Tibooburra",
+            "Broken Hill",
+            "Cobar",
+            "Coonabarabran",
+            "Griffith",
+            "Griffith North",
+            "Griffith South",
+            "Lower Darling",
+            "Narrabri",
+            "Bourke"
+          ],
+          "name": "Select Zone: "
+        }
+      },
+      {
+        "name": "kangarooTypeSelection",
+        "value": "Red Kangaroo", 
+        "bind": {
+          "input": "select",
+          "options": [
+            "Red Kangaroo",
+            "Western Grey Kangaroo",
+            "Eastern Grey Kangaroo"
+          ],
+          "name": "Select Kangaroo Type: "
+        }
+      }
+    ]
+  }
+  

@@ -1,55 +1,137 @@
 body {
-	font-family: 'Arial', sans-serif;
-	margin: 0;
-	padding: 20px;
-	background-color: #f9f9f9;
-	color: #333;
-  }
-  
-  .header {
-	text-align: center;
-	margin-bottom: 30px;
-  }
-  
-  h1 {
-	color: #4A90E2;
-	font-size: 2.5em;
-  }
-  
-  .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start; /* Align items to the start */
-	align-items: flex-start;
-	margin-bottom: 40px;
-	border: 1px solid #eaeaea;
-	border-radius: 8px;
-	background-color: #ffffff;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-	padding: 20px;
-  }
-  
-  .text-container {
-	width: 40%;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #A0D3E8, #F2E4B6);
+    font-size: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #4A90E2;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center align items */
+    margin-bottom: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.text-container {
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.lorem {
+    font-style: italic;
+    color: #666;
+}
+
+.container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-box {
+    background: rgba(255, 255, 255, 0.7); /* White with some transparency */
+    color: #333; /* Darker text for contrast */
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* shadow for depth */
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: inherit; /* Use the text color of .nav-box */
+}
+
+.nav-box:hover {
+    background: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+}
+
+.kangaroo-types {
+    display: flex; /* Align items in a row */
+    justify-content: space-around; /* Space them out evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0; /* Margin around the container */
+}
+
+.kangaroo-type {
+    display: flex;
+    flex-direction: column; /* Stack image above description */
+    align-items: center; /* Center align items */
+    max-width: 300px; /* Set a max width for responsiveness */
+    width: 100%; /* Ensure it uses full available width */
+    margin: 20px; /* Margin between boxes */
+    text-align: center; /* Center text */
+}
+
+.kangaroo-type img {
+    max-width: 100%; /* Responsive images */
+    height: 250px; /* Maintain aspect ratio */
+}
+
+.kangaroo-description {
+    width: 90%; /* Make the description fill the container */
+}
+
+ul {
+    padding-left: 20px; /* Indent the list */
+    margin: 12px 0; /* Space above and below the list */
+}
+
+li {
+    margin-bottom: 12px; /* Space between list items */
+}
+
+.references {
+	margin-top: 20px;
 	padding: 10px;
-	font-size: 0.9em;
+	border-top: 1px solid #ccc;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid #eaeaea;
+    border-radius: 8px;
   }
   
-  #kangaroo_map, #scatter_plot, #heatmap {
-	border: 1px solid #ccc;
-	height: 550px; /* Set a fixed height for each graph */
-	width: 100%; /* Adjust width to fit the graph */
-	margin-left: 20px;
-	border-radius: 4px;
-	background-color: #f7f7f7;
+  .references h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
   }
-  
-  p {
-	line-height: 1.5;
-  }
-  
-  .lorem {
-	font-style: italic;
-	color: #666;
-  }
-  
